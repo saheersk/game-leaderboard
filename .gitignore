@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+*.env
+*.venv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Logs and debugging
+*.log
+logs/
+debug.log
+nohup.out
+
+# Cache files
+.cache/
+*.egg-info/
+pip-wheel-metadata/
+.pytest_cache/
+
+# FastAPI & Uvicorn
+instance/
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+
+# Docker
+*.dockerignore
+docker-compose.override.yml
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Static & Media Files (Optional)
+staticfiles/
+media/
+
+# Coverage & Testing
+htmlcov/
+.coverage
+.tox/
+.nox/
+pytest.ini
+
+# Build & Distribution
+dist/
+build/
