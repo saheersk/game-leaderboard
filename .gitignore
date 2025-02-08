@@ -62,3 +62,16 @@ pytest.ini
 # Build & Distribution
 dist/
 build/
+
+
+# Ignore alembic cache but keep migrations
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+# Ignore Alembic migration cache but keep versions
+alembic/script.py.mako
+
+
+# Ignore gRPC-generated Python files
+*_pb2.py
+*_pb2_grpc.py

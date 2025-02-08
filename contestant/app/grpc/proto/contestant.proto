@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package contestant;
+
+service ContestantService {
+    rpc GetContestant (ContestantRequest) returns (ContestantResponse);
+}
+
+message ContestantRequest {
+    int32 id = 1;
+}
+
+message ContestantResponse {
+    int32 id = 1;
+    string username = 2;
+    int32 age = 3;
+}
