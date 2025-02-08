@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
+from app.api.v1.rest.contestant import router
 
-app = FastAPI("Contestant Service")
+app = FastAPI(title="Contestant Service")
+
+app.include_router(router, prefix="/api/v1")
 
 
 if __name__ == "__main__":
