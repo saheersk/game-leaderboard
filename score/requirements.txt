@@ -1,0 +1,9 @@
+fastapi[all]
+sqlalchemy
+databases
+alembic
+grpcio
+grpcio-tools
+protobuf
+psycopg2-binary
+pytest
