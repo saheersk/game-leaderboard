@@ -14,3 +14,9 @@ popularity_route = APIRouter()
                       response_model=List[PopularityScoreResponse])
 def get_popularity_scores(db: Session = Depends(get_db)):
     return db.query(PopularityScore).all()
+
+
+@popularity_route.get("/popularity-scores/game/{game_id}",
+                      response_model=List[PopularityScoreResponse])
+def get_game(game_id: int, db: Session = Depends(get_db)):
+    return db.query(PopularityScore).filter(PopularityScore.id == game_id)
