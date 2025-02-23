@@ -20,3 +20,12 @@ def get_popularity_scores(db: Session = Depends(get_db)):
                       response_model=List[PopularityScoreResponse])
 def get_game(game_id: int, db: Session = Depends(get_db)):
     return db.query(PopularityScore).filter(PopularityScore.id == game_id)
+
+@popularity_route.get("/popularity-scores/game/{game_id}/top-score",
+                      response_model=List[PopularityScoreResponse])
+def get_top_score(game_id: int, db: Session = Depends(get_db)):
+    scores = db.query(PopularityScore).filter(
+        PopularityScore.id == game_id,
+        PopularityScore.score > 100
+    ).all()
+    return scores
